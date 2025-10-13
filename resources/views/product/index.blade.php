@@ -16,6 +16,7 @@
                 <p>{{ $product -> name }}</p>
                 <p> {{ $product -> description }} </p>
                 <p>Цена: {{ $product -> price}} &#8381 </p>
+                <p>Категория: {{ $product -> category -> name  }}</p>
                 <form method="post" action="{{route('products.destroy', $product -> id)}}">
                     @csrf
                     @method('delete')

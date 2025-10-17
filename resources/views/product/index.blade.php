@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Каталог товаров</h1>
+    <p>{{ $buyer -> user -> name }}</p>
+    <p>{{ $buyer -> adress }}</p>
     <div class="container">
         <a href="{{ route('products.create') }}">Создать продукт</a>
         @foreach($products as $product)
